@@ -23,4 +23,4 @@ alias kcf='kubectl create -f '
 
 alias kcv='kubectl config view'
 alias kcc='kubectl config current-context'
-alias kcs='kubectl config set-context
+alias kcs='kubectl config set-context'
