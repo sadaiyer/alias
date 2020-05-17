@@ -1,3 +1,5 @@
+set -o vi
+
 alias k=kubectl
 alias kubect=kubectl
 alias sada='k run -it pod1 --image=cosmintitei/bash-curl --restart=Never --rm'
