@@ -28,6 +28,11 @@ alias kdn='kubectl describe node'
 
 alias kaf='kubectl apply -f '
 
+alias kcv='kubectl config view'
+alias kcc='kubectl config current-context'
+alias kcs='kubectl config set-context'
+
+#minimum set of alias
 alias kgp='kubectl get pods'
 alias kgs='kubect get services'
 alias kgd='kubectl get deploy'
@@ -37,9 +42,6 @@ alias rp='kubectl get pod;read -p "Filename:" podFileName;kubectl replace -f $po
 alias dp='kubectl get pod; read -p "Podname:" podName;kubectl delete pod $podName --force --grace-period=0; kubectl get pod'
 
 
-alias kcv='kubectl config view'
-alias kcc='kubectl config current-context'
-alias kcs='kubectl config set-context'
 
 
 alias w='watch -n 0.5 "kubectl config current-context; echo ''; kubectl config view | grep namespace; echo ''; kubectl get namespace,node,ingress,pod,svc,job,cronjob,deployment,rs,pv,pvc,secret,ep -o wide"'
