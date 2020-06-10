@@ -2,7 +2,9 @@ set -o vi
 
 alias k=kubectl
 alias kubect=kubectl
-alias sada='k run -it pod1 --image=cosmintitei/bash-curl --restart=Never --rm'
+#alias sada='k run -it pod1 --image=cosmintitei/bash-curl --restart=Never --rm'
+alias bb='k run bb --image=busybox:1.28 --restart=Never --rm -it -- /bin/sh'
+alias sada='k run -it pod1 --image=sadaiyer/bash-curl --restart=Never --rm'
 alias kgp='kubectl get pods'
 alias kgs='kubect get services'
 alias kgd='kubectl get deploy'
@@ -42,7 +44,9 @@ alias kcf='kubectl create -f '
 alias sc='kubectl get ns;read -p "Enter:" nameSpace;kubectl config set-context --current --namespace $nameSpace;k config view | grep -i namespace'
 alias rp='kubectl get pod;read -p "Filename:" podFileName;kubectl replace -f $podFileName --force --grace-period=0;kubectl get pod'
 alias dp='kubectl get pod; read -p "Podname:" podName;kubectl delete pod $podName --force --grace-period=0; kubectl get pod'
-export dr='--dry-run -o yaml'
+export dr='--dry-run=client -o yaml'
+export aa="grep -i '#' -A 2"
+export vimrc='autocmd FileType yaml setlocal et ts=2 ai sw=2 nu sts=0'
 
 
 
