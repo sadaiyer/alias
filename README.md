@@ -13,7 +13,7 @@ alias ll='ls -ltr'
 
 alias rp='kubectl get pod;read -p "Filename:" podFileName;kubectl replace -f $podFileName --force --grace-period=0;kubectl get pod'
 alias dp='kubectl get pod; read -p "Podname:" podName;kubectl delete pod $podName --force --grace-period=0; kubectl get pod'
-
+alias sc='k get ns;read -p "EnterNS:" nSpace;k config set-context --current --namespace=$nSpace;k config view | grep -i namespace;export NS=`k config view|grep namespace | cut -f2 -d:`;export PS1="[\u@\h $NS \W]\$"'
 
 alias kdp='kubectl describe pod'
 alias kdd='kubectl describe deployment'
