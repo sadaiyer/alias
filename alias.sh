@@ -48,6 +48,6 @@ alias dp='kubectl get pod; read -p "Podname:" podName;kubectl delete pod $podNam
 export dr='--dry-run=client -o yaml'
 export aa="grep -i '#' -A 2"
 export vimrc='autocmd FileType yaml setlocal et ts=2 ai sw=2 nu sts=0'
-
+export ETCDCTL_API=3
 
 
