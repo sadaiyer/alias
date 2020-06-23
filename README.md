@@ -6,6 +6,7 @@ alias sada='k run -it pod1 --image=cosmintitei/bash-curl --restart=Never --rm'
 alias kgp='kubectl get pods -o wide'
 alias kgs='kubect get services -o wide'
 alias kgd='kubectl get deploy -o wide'
+alias kgn='kubectl get nodes'
 
 alias c=clear
 alias ll='ls -ltr'
