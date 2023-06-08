@@ -51,3 +51,18 @@ export vimrc='autocmd FileType yaml setlocal et ts=2 ai sw=2 nu sts=0'
 export ETCDCTL_API=3
 
 
+
+alias bb='k run bb --image=busybox:1.28 --restart=Never --rm -it -- /bin/sh -c "sleep 3600"'
+alias ac='k run ac --image=sadaiyer/alpine-curl --restart=Never --rm -it '
+
+export EDITOR=vi
+export KUBE_EDITOR=vi
+alias kgn='kubectl get nodes'
+alias kdp='kubectl describe pod '
+alias wn='kubectl config view | grep namespace'
+export KN=' -n kube-system'
+alias kw='kgp -o wide -w'
+alias kj='kubeadm token create --print-join-command'
+alias kh='kubectl get cs;kubectl cluster-info;kubectl version --short; kubeadm alpha certs check-expiration'
+c
+
