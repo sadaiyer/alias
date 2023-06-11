@@ -50,13 +50,19 @@ export aa="grep -i '#' -A 2"
 export vimrc='autocmd FileType yaml setlocal et ts=2 ai sw=2 nu sts=0'
 export ETCDCTL_API=3
 
-
+alias showmem='grep Mem /proc/meminfo'
+alias showcpu='grep proc /proc/cpuinfo'
+alias showos='lsb_release -a'
+alias cni='kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"'
 
 alias bb='k run bb --image=busybox:1.28 --restart=Never --rm -it -- /bin/sh -c "sleep 3600"'
 alias ac='k run ac --image=sadaiyer/alpine-curl --restart=Never --rm -it '
 
 export EDITOR=vi
 export KUBE_EDITOR=vi
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
 alias kgn='kubectl get nodes'
 alias kdp='kubectl describe pod '
 alias wn='kubectl config view | grep namespace'
@@ -64,5 +70,18 @@ export KN=' -n kube-system'
 alias kw='kgp -o wide -w'
 alias kj='kubeadm token create --print-join-command'
 alias kh='kubectl get cs;kubectl cluster-info;kubectl version --short; kubeadm alpha certs check-expiration'
+
+alias pa='dpkg --print-architecture'
+alias getsa='k get clusterrolebinding -o custom-columns=CRB:.metadata.name,CR:.roleRef.name,SA:.subjects[*].name | grep -v system'
+alias kgcc='kgp -o custom-columns=NAME:.metadata.name,IMAGE:.spec.containers[*].image'
+
+alias kgsa='k get rolebinding -o custom-columns=RB:.metadata.name,Role:.roleRef.name,SA:.subjects[*].name | grep -v system'
+alias kgps='kgp --show-labels'
+alias kgnp='k get networkpolicies'
+alias kdnp='k delete networkpolicy '
+
+alias ekm='cd /etc/kubernetes/manifests/'
+alias kal='cd /var/log/pods/kube-system_kube-apiserver*/kube-apiserver/'
+
 c
 
