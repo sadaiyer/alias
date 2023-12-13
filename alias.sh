@@ -1,4 +1,5 @@
 #ALIAS# 
+# curl https://raw.githubusercontent.com/sadaiyer/alias/master/alias.sh > alias.sh
 # source alias.sh
 
 set -o vi
@@ -17,7 +18,9 @@ alias dp='k get pods;read -p "Enter podName:" podName;k delete pod $podName --fo
 alias sc='k get ns;read -p "Enter nSpace:" nSpace;k config set-context --current --namespace=$nSpace;k config view --minify | grep namespace;export PS1="\[\]\u:\H:$nSpace:$ "'
 alias c='clear'
 export dr='--dry-run=client -o yaml'
-alias mycurl=‘kubectl run mycurlpod --image=curlimages/curl -i --tty -- sh’
+
+alias mycurl='kubectl run mycurlpod --image=curlimages/curl -i --tty -- sh'
+alias pi='kubectl run --rm utils -it --image arunvelsriram/utils bash'
 
 # https://bash-prompt.net/guides/create-system-load/
 # Memory Section
@@ -85,3 +88,13 @@ alias mcurl='kubectl run --rm utils -it --image arunvelsriram/utils bash'
 alias bb='k run bb --image=busybox:1.28 --restart=Never --rm -it -- /bin/sh -c "sleep 3600"'
 
 c
+
+
+
+
+
+
+
+
+
+
