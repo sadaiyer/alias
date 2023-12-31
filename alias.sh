@@ -19,6 +19,9 @@ alias dp='k get pods;read -p "Enter podName:" podName;k delete pod $podName --fo
 alias sc='k get ns;read -p "Enter nSpace:" nSpace;k config set-context --current --namespace=$nSpace;k config view --minify | grep namespace;export PS1="\[\]\u:\H:$nSpace:$ "'
 alias c='clear'
 export dr='--dry-run=client -o yaml'
+alias hp='k run pods -h|grep "#" -A2;'
+alias hk='read -p "Enter Resource:" resName;echo $resName; k create $resName -h|grep "#" -A2;'
+
 
 alias mycurl='kubectl run mycurlpod --image=curlimages/curl -i --tty -- sh'
 alias pi='kubectl run --rm utils -it --image arunvelsriram/utils bash'
