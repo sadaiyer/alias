@@ -11,6 +11,7 @@ export ETCDCTL_API=3
 
 alias ll='ls -ltr'alias k='kubectl'
 alias kgp='k get pods'
+alias krf='kubectl --force --grace-period=0 replace -f '
 alias kgpw='k get pods -o wide'
 alias kgd='k get deploy'
 alias kgs='k get svc'
