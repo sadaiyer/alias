@@ -1,4 +1,4 @@
-#ALIAS# 
+##ALIAS#
 # curl https://raw.githubusercontent.com/sadaiyer/alias/master/alias.sh > alias.sh
 # source alias.sh
 
