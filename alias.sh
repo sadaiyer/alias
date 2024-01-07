@@ -4,6 +4,7 @@
 
 set -o vi
 alias ll='ls -ltr'
+export kn='-n kube-system'
 
 ## echo 'autocmd FileType yaml setlocal ts=2 sts=2 sw=2 et nonu' >> ~/.vimrc
 
