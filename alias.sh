@@ -6,6 +6,9 @@ set -o vi
 alias ll='ls -ltr'
 export kn='-n kube-system'
 
+#is the underlying linux systemd?
+alias ws='ps -p 1'
+
 ## echo 'autocmd FileType yaml setlocal ts=2 sts=2 sw=2 et nonu' >> ~/.vimrc
 
 export ETCDCTL_API=3
